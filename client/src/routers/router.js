@@ -17,7 +17,7 @@ const routes = [
                         name: 'HomePage',
                         component: () => import('@/views/pages/home/HomePage.vue'),
                         meta: {
-                            title: 'TMart - Mua sắm online giá tốt',
+                            title: 'RosyM - Mua sắm online giá tốt',
                         }
                     },
                     {
@@ -25,7 +25,7 @@ const routes = [
                         name: 'DetailProduct',
                         component: () => import('@/views/pages/product/DetailProduct.vue'),
                         meta: {
-                            title: 'TMart - Mua sắm online giá tốt',
+                            title: 'RosyM - Mua sắm online giá tốt',
                         }
                     },
                     {
@@ -33,7 +33,7 @@ const routes = [
                         name: 'ProductCatalogry',
                         component: () => import('@/views/pages/catalogry/ProductCatalogry.vue'),
                         meta: {
-                            title: 'TMart - Mua sắm online giá tốt',
+                            title: 'RosyM - Mua sắm online giá tốt',
                         }
                     },
                     {
@@ -113,7 +113,7 @@ const routes = [
                         name: 'ProductSearch',
                         component: () => import('@/views/pages/product/ProductSearch.vue'),
                         meta: {
-                            title: 'TMart - Mua sắm online giá tốt',
+                            title: 'RosyM - Mua sắm online giá tốt',
                             authenticate: false
                         }
                     },

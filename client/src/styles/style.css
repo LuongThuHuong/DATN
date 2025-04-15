@@ -5,9 +5,9 @@
 @import './carousel.css';
 
 :root {
-    --color-primary: #006fff;
-    --color-primary-hover: #4696ff;
-    --color-primary-focus: #0138ff;
+    --color-primary: #e06666;
+    --color-primary-hover: #be7881;
+    --color-primary-focus: #be3b72;
     --color-primary-opacity: rgba(59, 144, 255, 0.2);
     --color-white: #ffff;
     --color-text: #27272a;

@@ -2,7 +2,7 @@
     <header id="header">
         <div class="logo">
             <router-link :to="{ name: 'HomePage' }"
-                ><span>T</span>Mart</router-link
+                ><span>Rosy</span>M</router-link
             >
         </div>
         <div class="search-box">
@@ -225,14 +225,14 @@ export default {
 #header .logo > a > span {
     font-family: cursive;
     font-size: 3rem;
-    color: var(--color-primary);
+    color: #e06666;
     cursor: pointer;
     text-decoration: none;
     font-weight: 600;
 }
 
 #header .logo > a > span {
-    color: var(--color-orange);
+    color: #e06666;
 }
 
 #header .search-box {

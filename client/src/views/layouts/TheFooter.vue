@@ -7,12 +7,12 @@
                     Nam
                     <i class="fa-solid fa-location-dot"></i>
                 </a>
-                <a href="tel:098765432">
-                    098765432
+                <a href="tel:0328431797">
+                    0328431797
                     <i class="fa-solid fa-phone"></i>
                 </a>
-                <a href="mailto:supporttmart@email.com">
-                    supporttmart@email.com
+                <a href="mailto:thuhuongcd03@gmail.com">
+                    thuhuongcd03@gmail.com
                     <i class="fa-solid fa-envelope"></i>
                 </a>
             </div>
@@ -127,7 +127,7 @@ export default {
 #footer .copyright {
     text-align: center;
     font-size: 1.1rem;
-    background-color: var(--color-primary-focus);
+    background-color: #7e7070;
     padding: 10px 0;
 }
 </style>
