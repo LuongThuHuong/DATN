@@ -1,13 +1,13 @@
 <script lang="js" setup>
 
 import { useAuthStore } from '@/stores/auth';
-import router from '@/routers/router';
+import { useRoute } from 'vue-router';
 
 const authStore = useAuthStore();
+const route = useRoute();
 
 const handleLogout = () => {
-    authStore.fetchLogout();
-    router.push({ name: 'Login' });
+    authStore.fetchLogout(route);
 }
 </script>
 
@@ -17,8 +17,8 @@ const handleLogout = () => {
             <div class="sidebar-content">
                 <div class="logo">
                     <router-link :to="{ name: 'HomePage' }">
-                        <span class="t">Rosy</span>
-                        <span class="mart">M</span>
+                        <span class="t">T</span>
+                        <span class="mart">Mart</span>
                     </router-link>
                 </div>
                 <ul>
@@ -105,12 +105,12 @@ const handleLogout = () => {
 }
 
 .admin-page .sidebar .logo > a > .t {
-    color: #ffffff;
+    color: var(--color-orange);
     font-size: 2rem;
 }
 
 .admin-page .sidebar .logo > a > .mart {
-    color: #ffffff;
+    color: var(--color-white);
     font-size: 2rem;
     font-style: italic;
 }
