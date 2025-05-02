@@ -18,22 +18,22 @@
             </div>
             <div class="footer-about">
                 <p>
-                    TMart là một trang web mua sắm trực tuyến chuyên cung cấp các sản phẩm công nghệ hàng đầu, mang đến cho
-                    khách hàng trải nghiệm mua sắm thuận tiện và đa dạng. Với danh mục sản phẩm đa dạng từ điện thoại di
-                    động, máy tính xách tay, đồ điện tử gia dụng đến phụ kiện công nghệ, TMart cam kết mang đến cho người
-                    tiêu dùng những sản phẩm chất lượng với giá cả hợp lý.
+                    RosyM là một trang web mua sắm trực tuyến chuyên cung cấp các sản phẩm nến thơm cao cấp, mang đến
+                    cho khách hàng trải nghiệm thư giãn và tinh tế trong không gian sống. Với các dòng sản phẩm đa dạng
+                    từ nến thơm thư giãn, nến trang trí đến nến quà tặng, RosyM cam kết mang đến cho người tiêu dùng những
+                    sản phẩm chất lượng, an toàn với mùi hương độc đáo và mức giá hợp lý..
                 </p>
             </div>
 
         </div>
         <div class="footer-center">
-            <a target="_blank" href="https://www.facebook.com/hue.bich.3760"><i class="fa-brands fa-facebook"></i></a>
-            <a target="_blank" href="https://github.com/Huevt/DATN_Hue"><i class="fa-brands fa-github"></i></a>
-            <a target="_blank" class="insta" href="https://www.instagram.com/huy.dang_1304"><i
+            <a target="_blank" href="https://www.facebook.com/thuuhuonghhh/"><i class="fa-brands fa-facebook"></i></a>
+            <a target="_blank" href="https://github.com/LuongThuHuong/DATN"><i class="fa-brands fa-github"></i></a>
+            <a target="_blank" class="insta" href="https://www.instagram.com/_lthhhhh/"><i
                     class="fa-brands fa-instagram"></i></a>
         </div>
         <div class="copyright">
-            <p>&copy; 2024 - Bản quyền thuộc về TMart</p>
+            <p>&copy; 2025 - Bản quyền thuộc về RosyM</p>
         </div>
     </footer>
 </template>
@@ -127,7 +127,7 @@ export default {
 #footer .copyright {
     text-align: center;
     font-size: 1.1rem;
-    background-color: #7e7070;
+    background-color: #792929;
     padding: 10px 0;
 }
 </style>
