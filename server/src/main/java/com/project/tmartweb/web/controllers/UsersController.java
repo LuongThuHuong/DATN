@@ -29,10 +29,11 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class UsersController {
     private final IUserService userService;
+    private final GenerateValue generateValue;
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@Valid @RequestBody UserDTO userDTO) {
-        userDTO.setUserName(GenerateValue.generateUsername());
+        userDTO.setUserName(generateValue.generateUsername(userDTO.getEmail()));
         userDTO.setRoleId(RoleId.USER);
         var res = userService.insert(userDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(res);
@@ -73,7 +74,7 @@ public class UsersController {
     public ResponseEntity<?> getByToken(@PathVariable String token) {
         var result = userService.getByToken(token);
         return ResponseEntity.status(HttpStatus.OK)
-                             .body(result);
+                .body(result);
     }
 
     @GetMapping("/username/{username}")
@@ -96,9 +97,9 @@ public class UsersController {
     public ResponseEntity<?> update(@PathVariable UUID id, @Valid @RequestBody UserDTO userDTO, BindingResult result) {
         if (result.hasErrors()) {
             List<String> errorMessages = result.getFieldErrors()
-                                               .stream()
-                                               .map(FieldError::getDefaultMessage)
-                                               .toList();
+                    .stream()
+                    .map(FieldError::getDefaultMessage)
+                    .toList();
             return ResponseEntity.badRequest().body(errorMessages);
         }
         return ResponseEntity.status(HttpStatus.OK).body(userService.update(id, userDTO));

@@ -27,7 +27,6 @@ const onSubmit = async () => {
         route.query.redirect ? router.replace(route.query.redirect) : router.replace({ name: 'HomePage' });
     }
 }
-
 </script>
 
 <template>
@@ -41,7 +40,11 @@ const onSubmit = async () => {
                             <div class="col-12">
                                 <div class="text-center mb-5">
                                     <router-link :to="{ name: 'HomePage' }">
+<<<<<<< HEAD
                                         <img :src="require('@/assets/imgs/logoo.png')" alt="Logo" width="210">
+=======
+                                        <img :src="require('@/assets/imgs/logo.png')" alt="Logo" width="150">
+>>>>>>> 6d034f24a60ac6b0432da43c74708e11f8029c2e
                                     </router-link>
                                 </div>
                             </div>
@@ -49,8 +52,8 @@ const onSubmit = async () => {
                         <form @submit.prevent="onSubmit">
                             <div class="row gy-3 gy-md-4 overflow-hidden">
                                 <div class="col-12">
-                                    <label for="email" class="d-block form-label">Tên đăng nhập <span
-                                            class="text-danger">*</span></label>
+                                    <label for="email" class="d-block form-label">Tên đăng nhập
+                                        <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <span class="input-group-text">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -60,12 +63,12 @@ const onSubmit = async () => {
                                             </svg>
                                         </span>
                                         <input placeholder="Tên đăng nhập hoặc email" type="text" class="form-control"
-                                            v-model="user.userName" id="email" required>
+                                            v-model="user.userName" id="email" required />
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <label for="password" class="d-block form-label">Mật khẩu <span
-                                            class="text-danger">*</span></label>
+                                    <label for="password" class="d-block form-label">Mật khẩu
+                                        <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <span class="input-group-text">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -76,25 +79,26 @@ const onSubmit = async () => {
                                             </svg>
                                         </span>
                                         <input placeholder="********" type="password" class="form-control"
-                                            v-model="user.password" id="password" value="" required>
+                                            v-model="user.password" id="password" value="" required />
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="d-grid">
-                                        <button class="btn btn-primary btn-lg" type="submit">Đăng
-                                            nhập</button>
+                                        <button class="btn btn-primary btn-lg" type="submit">
+                                            Đăng nhập
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </form>
                         <div class="row">
                             <div class="col-12">
-                                <hr class="mt-5 mb-4 border-secondary-subtle">
+                                <hr class="mt-5 mb-4 border-secondary-subtle" />
                                 <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-center">
-                                    <router-link :to="{ name: 'Register' }" class="link-secondary
-                                        text-decoration-none">Tạo mới tài khoản</router-link>
-                                    <router-link :to="{ name: 'Register' }" class="link-secondary
-                                        text-decoration-none">Quên mật khẩu?</router-link>
+                                    <router-link :to="{ name: 'Register' }"
+                                        class="link-secondary text-decoration-none">Tạo mới tài khoản</router-link>
+                                    <router-link :to="{ name: 'Register' }"
+                                        class="link-secondary text-decoration-none">Quên mật khẩu?</router-link>
                                 </div>
                             </div>
                         </div>

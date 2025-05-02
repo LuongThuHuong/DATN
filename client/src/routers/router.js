@@ -266,13 +266,19 @@ const router = createRouter({
 router.beforeEach(async (to, from, next) => {
     document.title = to.meta.title;
     await authenticate()
-    if (to.meta.authenticate && !localStorage.getItem('user')) {
+    const isLogin = !!localStorage.getItem('user');
+    if ((to.name === 'Login' || to.name === 'Register') && isLogin) {
+        next(from.fullPath)
+    }
+    else if (to.meta.authenticate && !localStorage.getItem('user')) {
         requireAuth(to, from, next);
     }
-    if (to.meta.requireAdmin) {
+    else if (to.meta.requireAdmin) {
         await requireAdmin(to, from, next);
     }
-    next();
+    else {
+        next();
+    }
 })
 
 export default router;
