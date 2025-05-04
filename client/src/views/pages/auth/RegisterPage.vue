@@ -38,11 +38,7 @@ const onSubmit = () => {
                             <div class="col-12">
                                 <div class="text-center mb-5">
                                     <router-link :to="{ name: 'HomePage' }">
-<<<<<<< HEAD
                                         <img :src="require('@/assets/imgs/logoo.png')" alt="Logo" width="210">
-=======
-                                        <img :src="require('@/assets/imgs/logo.png')" alt="Logo" width="150">
->>>>>>> 6d034f24a60ac6b0432da43c74708e11f8029c2e
                                     </router-link>
                                 </div>
                             </div>
