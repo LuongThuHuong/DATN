@@ -7,7 +7,7 @@
             <h4>Sản phẩm đề xuất</h4>
         </div>
         <div class="product row sm-gutter">
-            <div class="col-xxl-2 product-item" v-for="(item) in productsData" :key="item?.id">
+            <div class="col-2 product-item" v-for="(item) in productsData" :key="item?.id">
                 <router-link :to="{ name: 'DetailProduct', params: { id: item?.id } }" :title="item?.title"
                     class="product-item">
                     <ProductTag :item="item"></ProductTag>
@@ -85,11 +85,12 @@ const handleLoadMore = async () => {
 
 .product {
     display: flex;
-    padding: 20px 0;
+    padding: 2px 10px;
 }
 
 .product-item {
     margin-top: 10px;
+    margin: 0 -5px 0 -5px;
 }
 
 .product .product-item>a {

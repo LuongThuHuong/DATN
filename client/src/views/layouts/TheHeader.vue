@@ -28,7 +28,7 @@
                     @mouseleave="isShowAccOption = false">
                     <span>{{
                         authStore.isLoggedIn ? `Tài khoản` : "Đăng nhập"
-                        }}</span>
+                    }}</span>
                 </div>
                 <div v-if="authStore.isLoggedIn" @mouseover="isShowAccOption = true"
                     @mouseleave="isShowAccOption = false" v-show="isShowAccOption" class="account-box">
@@ -203,6 +203,7 @@ export default {
     width: 62%;
     justify-content: center;
     align-items: center;
+    margin-left: 10px;
 }
 
 #header .search-box .search-box-item {

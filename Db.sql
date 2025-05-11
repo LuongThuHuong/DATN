@@ -59,6 +59,7 @@ create table products(
 	discount double precision,
 	description text,
 	deleted bool,
+    quantity int,
 	classify varchar(100),
 	created_at timestamp,
 	created_by varchar(100),
