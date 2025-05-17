@@ -1,14 +1,13 @@
 import OpenAI from "openai";
 
-
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
+    apiKey: process.env.OPENAI_API_KEY,
 });
 
 export const chatbot = async (req, res) => {
     try {
-        const prompt = req.body.prompt || 'Xin chào';
-        const model = "ft:gpt-3.5-turbo-0125:personal:tmartbot:9QeT8Ohh";
+        const prompt = req.body.prompt || "Xin chào";
+        const model = "gpt-4.1-mini-2025-04-14";
         const completion = await openai.chat.completions.create({
             messages: [{ role: "user", content: prompt }],
             model: model,
@@ -19,4 +18,4 @@ export const chatbot = async (req, res) => {
         console.log(error);
         res.status(500).json({ error: error });
     }
-}
+};
