@@ -204,11 +204,7 @@ export default {
     width: 60%;
     justify-content: center;
     align-items: center;
-<<<<<<< Updated upstream
-    margin-left: 10px;
-=======
     margin-left: 20px;
->>>>>>> Stashed changes
 }
 
 #header .search-box .search-box-item {
