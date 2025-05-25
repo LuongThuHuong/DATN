@@ -85,12 +85,21 @@ const handleLoadMore = async () => {
 
 .product {
     display: flex;
+<<<<<<< Updated upstream
     padding: 2px 10px;
 }
 
 .product-item {
     margin-top: 10px;
     margin: 0 -5px 0 -5px;
+=======
+    padding: 1px 10px;
+}
+
+.product-item {
+    margin: 0 -5px 0 -5px;
+    /* margin-top: 10px; */
+>>>>>>> Stashed changes
 }
 
 .product .product-item>a {

@@ -56,7 +56,7 @@
                         <p>{{ product?.discount }}% GIẢM</p>
                     </div>
                 </div>
-                <div class="product-option">
+                <!-- <div class="product-option">
                     <div class="options">
                         <h5>Màu sắc</h5>
                         <div class="option-item">
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="product-quantity">
                     <p class="quantity-tile">Số lượng</p>
                     <div class="select-quantity">
@@ -149,9 +149,9 @@ nextTick(async () => {
 });
 
 // --------------------- Hàm xử lý --------------------------
-const changeClassify = (item) => {
-    classify.value = item;
-};
+// const changeClassify = (item) => {
+//     classify.value = item;
+// };
 
 const calculateStar = (feedbacks) => {
     let totalStar = 0;

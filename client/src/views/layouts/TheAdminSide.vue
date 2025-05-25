@@ -17,8 +17,7 @@ const handleLogout = () => {
             <div class="sidebar-content">
                 <div class="logo">
                     <router-link :to="{ name: 'HomePage' }">
-                        <span class="t">T</span>
-                        <span class="mart">Mart</span>
+                        <span class="mart">RosyM</span>
                     </router-link>
                 </div>
                 <ul>

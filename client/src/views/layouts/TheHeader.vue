@@ -188,7 +188,7 @@ export default {
 #header .logo>a,
 #header .logo>a>span {
     font-family: cursive;
-    font-size: 3rem;
+    font-size: 3.3rem;
     color: #e06666;
     cursor: pointer;
     text-decoration: none;
@@ -201,10 +201,14 @@ export default {
 
 #header .search-box {
     display: flex;
-    width: 62%;
+    width: 60%;
     justify-content: center;
     align-items: center;
+<<<<<<< Updated upstream
     margin-left: 10px;
+=======
+    margin-left: 20px;
+>>>>>>> Stashed changes
 }
 
 #header .search-box .search-box-item {
