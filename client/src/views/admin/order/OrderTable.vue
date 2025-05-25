@@ -61,6 +61,14 @@ const handleCancelOrder = async (item) => {
         dialog("Thông báo", "warning", "Đơn hàng đã bị hủy");
         return;
     }
+    if (item?.status === "PAID") {
+        dialog(
+            " thông báo",
+            "warning",
+            "Không thể hủy đơn hàng đã thanh toán"
+        );
+        return;
+    }
     if (item?.status === "SHIPPING" || item?.status === "SHIPPED") {
         dialog(
             "Thông báo",
@@ -110,11 +118,7 @@ const filterOrder = async () => {
             <h1>Quản lý đơn hàng</h1>
             <div class="btn-group btn-group-filter">
                 <div class="btn-search">
-                    <select
-                        v-model="statusSearch"
-                        class="form-select"
-                        id="statusSearch"
-                    >
+                    <select v-model="statusSearch" class="form-select" id="statusSearch">
                         <option value="" selected>Trạng thái</option>
                         <option value="PENDING">Chờ xác nhận</option>
                         <option value="PROCESSED">Đã xác nhận</option>
@@ -124,18 +128,8 @@ const filterOrder = async () => {
                         <option value="UNPAID">Chưa thanh toán</option>
                         <option value="CANCELLED">Đã hủy</option>
                     </select>
-                    <b-datepicker
-                        id="startDate"
-                        v-model="startDate"
-                        :timePicker="true"
-                        placeholder="Từ ngày"
-                    />
-                    <b-datepicker
-                        id="endDate"
-                        v-model="endDate"
-                        :timePicker="true"
-                        placeholder="Đến ngày"
-                    />
+                    <b-datepicker id="startDate" v-model="startDate" :timePicker="true" placeholder="Từ ngày" />
+                    <b-datepicker id="endDate" v-model="endDate" :timePicker="true" placeholder="Đến ngày" />
                     <div class="btn-search-button">
                         <b-button @click="filterOrder" type="secondary">
                             Tìm kiếm
@@ -174,46 +168,28 @@ const filterOrder = async () => {
                     <td>{{ item?.paymentMethod }}</td>
                     <td>{{ $formatValue.formatMoney(item?.totalMoney) }}</td>
                     <td class="status-order">
-                        <span
-                            :class="[
-                                'status-order-item',
-                                item?.status.toLowerCase(),
-                            ]"
-                        >
+                        <span :class="[
+                            'status-order-item',
+                            item?.status.toLowerCase(),
+                        ]">
                             {{ getStatusOrder(item?.status) }}
                         </span>
                     </td>
                     <td class="action">
-                        <button
-                            @click="handleShowDetail(item)"
-                            class="btn-confirm"
-                        >
+                        <button @click="handleShowDetail(item)" class="btn-confirm">
                             <i class="fa-regular fa-rectangle-list"></i>
                         </button>
-                        <button
-                            @click="handleCancelOrder(item)"
-                            class="btn-cancel"
-                        >
+                        <button @click="handleCancelOrder(item)" class="btn-cancel">
                             <i class="fa-solid fa-ban"></i>
                         </button>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <v-pagination
-            v-model="page"
-            size="40"
-            :length="totalPage"
-            rounded="circle"
-        ></v-pagination>
+        <v-pagination v-model="page" size="40" :length="totalPage" rounded="circle"></v-pagination>
     </div>
-    <OrderModal
-        v-if="showModal"
-        :orderId="orderId"
-        @closeModal="showModal = false"
-        :page="page - 1"
-        :perPage="perPage"
-    />
+    <OrderModal v-if="showModal" :orderId="orderId" @closeModal="showModal = false" :page="page - 1"
+        :perPage="perPage" />
 </template>
 
 <style lang="css" src="../admin-table.css" scoped></style>
