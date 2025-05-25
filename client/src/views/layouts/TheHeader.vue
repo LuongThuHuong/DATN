@@ -20,15 +20,16 @@
                     <router-link :to="{ name: 'NotifyPage' }">
                         <i class="fa-solid fa-bell"></i>
                         Thông báo
-                        <span v-if="notificationListNoRead.length > 0" class="quantity-notify">{{
-                            notificationListNoRead.length }}</span>
+                        <span v-if="notificationListNoRead && notificationListNoRead.length > 0"
+                            class="quantity-notify">{{
+                                notificationListNoRead.length }}</span>
                     </router-link>
                 </div>
                 <div @click="handleClickAccount" class="account-tile" @mouseover="isShowAccOption = true"
                     @mouseleave="isShowAccOption = false">
                     <span>{{
                         authStore.isLoggedIn ? `Tài khoản` : "Đăng nhập"
-                    }}</span>
+                        }}</span>
                 </div>
                 <div v-if="authStore.isLoggedIn" @mouseover="isShowAccOption = true"
                     @mouseleave="isShowAccOption = false" v-show="isShowAccOption" class="account-box">
